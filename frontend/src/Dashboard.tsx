@@ -1,6 +1,6 @@
 import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import ReactMapGL from "react-map-gl";
+import { Link } from "react-router-dom";
 import "./App.css";
 import React from "react";
 
@@ -20,6 +20,9 @@ const Dashboard = () => {
       </div>
       <h1>Map</h1>
       <div className="card">
+        <div className="card">
+          <Link to="/">Go to home</Link>
+        </div>
         <ReactMapGL
           {...viewport}
           onMove={(evt) =>

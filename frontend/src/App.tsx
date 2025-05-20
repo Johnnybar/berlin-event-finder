@@ -35,7 +35,7 @@ function App() {
             component="div"
             sx={{ flexGrow: 1, fontWeight: 600 }}
           >
-            Berlin Events Finder
+            Berlin Further Education Events Finder
           </Typography>
           <Box sx={{ display: "flex", gap: 2 }}>
             <Button
@@ -99,14 +99,15 @@ function App() {
           >
             Welcome to Berlin Events Finder
           </Typography>
-          <Typography variant="h6" color="text.secondary" paragraph>
-            Discover all upcoming events in Berlin, easy to browse and explore.
+          <Typography variant="h5" color="text.secondary" paragraph>
+            Discover upcoming further education events in Berlin, easy to browse
+            and explore.
           </Typography>
           <Divider sx={{ my: 3 }} />
           <Typography variant="body1" paragraph>
-            Find the perfect events in Berlin with our interactive map and
-            detailed listings. Whether you're looking for courses, workshops, or
-            cultural events, we've got you covered.
+            Find the fitting further education events in Berlin with our
+            interactive map and detailed listings. Whether you're looking for
+            courses, workshops, or programs, we've got you covered.
           </Typography>
         </Paper>
 

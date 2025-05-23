@@ -47,21 +47,14 @@ function App() {
             >
               Home
             </Button>
-            <Button
-              component={Link}
-              to="/dashboard"
-              color="inherit"
-              startIcon={<TableChartOutlined />}
-            >
-              Table View
-            </Button>
+
             <Button
               component={Link}
               to="/map"
               color="inherit"
               startIcon={<MapOutlined />}
             >
-              Map View
+              Interactive Dashboard
             </Button>
           </Box>
         </Toolbar>
@@ -153,53 +146,6 @@ function App() {
                   sx={{ borderRadius: 2 }}
                 >
                   Open Map View
-                </Button>
-              </CardActions>
-            </Card>
-          </Grid>
-
-          <Grid item xs={12} md={6}>
-            <Card
-              elevation={2}
-              sx={{
-                height: "100%",
-                display: "flex",
-                flexDirection: "column",
-                transition: "transform 0.2s",
-                "&:hover": {
-                  transform: "translateY(-5px)",
-                },
-                borderRadius: 2,
-              }}
-            >
-              <CardContent sx={{ flexGrow: 1, textAlign: "center", pt: 4 }}>
-                <TableChartOutlined
-                  sx={{ fontSize: 60, color: "primary.main", mb: 2 }}
-                />
-                <Typography
-                  variant="h5"
-                  component="h2"
-                  gutterBottom
-                  fontWeight="bold"
-                >
-                  Detailed Table View
-                </Typography>
-                <Typography variant="body1" color="text.secondary">
-                  Browse all events in a comprehensive table format. Sort,
-                  filter, and search through events to find exactly what you're
-                  looking for.
-                </Typography>
-              </CardContent>
-              <CardActions sx={{ p: 2, pt: 0, justifyContent: "center" }}>
-                <Button
-                  component={Link}
-                  to="/dashboard"
-                  variant="contained"
-                  size="large"
-                  startIcon={<TableChartOutlined />}
-                  sx={{ borderRadius: 2 }}
-                >
-                  Open Table View
                 </Button>
               </CardActions>
             </Card>

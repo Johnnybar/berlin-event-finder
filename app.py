@@ -20,7 +20,7 @@ def get_berlin_courses():
 # Frontend routes
 @app.route("/")
 @app.route("/map")
-@app.route("/dashboard")
+@app.route("/combined")
 def serve_react():
     return send_from_directory(app.static_folder, "index.html")
 

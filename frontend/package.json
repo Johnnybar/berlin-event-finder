@@ -16,8 +16,8 @@
     "@turf/turf": "^7.2.0",
     "mapbox-gl": "^3.11.0",
     "mui": "^0.0.1",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-map-gl": "^8.0.3",
     "satellite.js": "^5.0.0",
     "turf": "^3.0.14"

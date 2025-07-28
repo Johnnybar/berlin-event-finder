@@ -3,12 +3,14 @@
         "@emotion/react": "^11.14.0",
         "@emotion/styled": "^11.14.0",
         "@mui/icons-material": "^7.1.0",
-        "react-router-dom": "^7.4.1"
+        "react-router-dom": "^7.4.1",
+        "concurrently": "^9.2.0"
     },
     "scripts": {
         "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
         "start:backend": "./venv/bin/flask run",
         "start:frontend": "cd frontend && npm run dev"
+
     },
     "devDependencies": {
         "concurrently": "^9.2.0",

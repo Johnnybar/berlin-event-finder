@@ -15,7 +15,6 @@ import {
 import { Link } from "react-router-dom";
 import {
   MapOutlined,
-  TableChartOutlined,
   ExploreOutlined,
   LocationCityOutlined,
 } from "@mui/icons-material";

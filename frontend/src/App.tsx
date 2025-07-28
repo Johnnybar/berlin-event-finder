@@ -9,10 +9,9 @@ import {
   Card,
   CardContent,
   CardActions,
-  Grid,
   Divider,
 } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 import {
   MapOutlined,
   ExploreOutlined,
@@ -38,7 +37,7 @@ function App() {
           </Typography>
           <Box sx={{ display: "flex", gap: 2 }}>
             <Button
-              component={Link}
+              component={RouterLink}
               to="/"
               color="inherit"
               variant="outlined"
@@ -48,7 +47,7 @@ function App() {
             </Button>
 
             <Button
-              component={Link}
+              component={RouterLink}
               to="/map"
               color="inherit"
               startIcon={<MapOutlined />}
@@ -102,54 +101,52 @@ function App() {
           </Typography>
         </Paper>
 
-        <Grid container spacing={3} maxWidth={800}>
-          <Grid item xs={12} md={6}>
-            <Card
-              elevation={2}
-              sx={{
-                height: "100%",
-                display: "flex",
-                flexDirection: "column",
-                transition: "transform 0.2s",
-                "&:hover": {
-                  transform: "translateY(-5px)",
-                },
-                borderRadius: 2,
-              }}
-            >
-              <CardContent sx={{ flexGrow: 1, textAlign: "center", pt: 4 }}>
-                <MapOutlined
-                  sx={{ fontSize: 60, color: "primary.main", mb: 2 }}
-                />
-                <Typography
-                  variant="h5"
-                  component="h2"
-                  gutterBottom
-                  fontWeight="bold"
-                >
-                  Interactive Map View
-                </Typography>
-                <Typography variant="body1" color="text.secondary">
-                  Explore events geographically on our interactive map. See
-                  where events are happening across Berlin and find those
-                  closest to you.
-                </Typography>
-              </CardContent>
-              <CardActions sx={{ p: 2, pt: 0, justifyContent: "center" }}>
-                <Button
-                  component={Link}
-                  to="/map"
-                  variant="contained"
-                  size="large"
-                  startIcon={<ExploreOutlined />}
-                  sx={{ borderRadius: 2 }}
-                >
-                  Open Map View
-                </Button>
-              </CardActions>
-            </Card>
-          </Grid>
-        </Grid>
+        <Box sx={{ maxWidth: 800, width: "100%" }}>
+          <Card
+            elevation={2}
+            sx={{
+              height: "100%",
+              display: "flex",
+              flexDirection: "column",
+              transition: "transform 0.2s",
+              "&:hover": {
+                transform: "translateY(-5px)",
+              },
+              borderRadius: 2,
+            }}
+          >
+            <CardContent sx={{ flexGrow: 1, textAlign: "center", pt: 4 }}>
+              <MapOutlined
+                sx={{ fontSize: 60, color: "primary.main", mb: 2 }}
+              />
+              <Typography
+                variant="h5"
+                component="h2"
+                gutterBottom
+                fontWeight="bold"
+              >
+                Interactive Map View
+              </Typography>
+              <Typography variant="body1" color="text.secondary">
+                Explore events geographically on our interactive map. See
+                where events are happening across Berlin and find those
+                closest to you.
+              </Typography>
+            </CardContent>
+            <CardActions sx={{ p: 2, pt: 0, justifyContent: "center" }}>
+              <Button
+                component={RouterLink}
+                to="/map"
+                variant="contained"
+                size="large"
+                startIcon={<ExploreOutlined />}
+                sx={{ borderRadius: 2 }}
+              >
+                Open Map View
+              </Button>
+            </CardActions>
+          </Card>
+        </Box>
 
         <Box
           sx={{

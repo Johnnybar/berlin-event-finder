@@ -9,7 +9,6 @@ import {
   Toolbar,
   Button,
   IconButton,
-  Grid,
   Card,
   CardContent,
   Chip,
@@ -23,7 +22,6 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import {
-  MapOutlined,
   Home,
   Close,
   Search,
@@ -532,8 +530,8 @@ export const CombinedView = () => {
                       </Box>
 
                       <Box sx={{ px: 2, pb: 2 }}>
-                        <Grid container spacing={2}>
-                          <Grid item xs={12}>
+                        <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
+                          <Box>
                             <Paper
                               variant="outlined"
                               sx={{ p: 2, bgcolor: "background.default" }}
@@ -547,26 +545,24 @@ export const CombinedView = () => {
                                 {event.eventInfo.va_adresse}
                               </Typography>
                             </Paper>
-                          </Grid>
-                          <Grid item xs={6}>
+                          </Box>
+                          <Box sx={{ display: "flex", gap: 2 }}>
                             <Chip
                               label={`Start: ${new Date(event.eventInfo.datum_beginn).toLocaleDateString("de-DE")}`}
                               color="primary"
                               variant="outlined"
                               size="small"
-                              sx={{ width: "100%" }}
+                              sx={{ flex: 1 }}
                             />
-                          </Grid>
-                          <Grid item xs={6}>
                             <Chip
                               label={`End: ${new Date(event.eventInfo.datum_ende).toLocaleDateString("de-DE")}`}
                               color="secondary"
                               variant="outlined"
                               size="small"
-                              sx={{ width: "100%" }}
+                              sx={{ flex: 1 }}
                             />
-                          </Grid>
-                        </Grid>
+                          </Box>
+                        </Box>
                       </Box>
                     </CardContent>
                   </Card>

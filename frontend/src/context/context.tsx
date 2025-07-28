@@ -10,6 +10,7 @@ export interface EventsInfo {
     va_adresse: string
     datum_beginn: string
     va_name: string
+    datum_ende: string
   }
 }
 

@@ -1,11 +1,11 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { EventFinderProvider } from "./context/provider.tsx";
-import { CombinedView } from "./Combined.tsx";
+import { EventFinderProvider } from "./context/provider";
+import { CombinedView } from "./Combined";
 
 import "./index.css";
-import App from "./App.tsx";
+import App from "./App";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

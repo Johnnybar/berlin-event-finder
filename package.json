@@ -7,13 +7,12 @@
         "concurrently": "^9.2.0"
     },
     "scripts": {
-        "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+        "start": "echo 'Checking concurrently...' && ls -la node_modules/.bin && npx concurrently \"npm run start:backend\" \"npm run start:frontend\"",
         "start:backend": "./venv/bin/flask run",
         "start:frontend": "cd frontend && npm run dev"
 
     },
     "devDependencies": {
-        "concurrently": "^9.2.0",
         "eslint-plugin-prettier": "^5.2.6"
     }
 }

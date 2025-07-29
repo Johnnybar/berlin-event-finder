@@ -4,10 +4,12 @@ FROM python:3.11-slim
 # Set working directory
 WORKDIR /app
 
-# Install system dependencies
+# Install system dependencies and yarn
 RUN apt-get update && apt-get install -y \
     nodejs \
     npm \
+    curl \
+    && npm install -g yarn \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy package files first for better caching

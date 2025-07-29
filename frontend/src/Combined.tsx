@@ -34,7 +34,7 @@ import Map, {
   Marker,
   NavigationControl,
   GeolocateControl,
-} from "react-map-gl/mapbox";
+} from "react-map-gl";
 import { DataGrid, GridColDef, GridRenderCellParams } from "@mui/x-data-grid";
 import { EventFinderContext, EventsInfo } from "./context/context";
 import { eventsInfoMock } from "./mocks";

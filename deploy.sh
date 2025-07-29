@@ -17,6 +17,12 @@ if ! flyctl auth whoami &> /dev/null; then
     flyctl auth login
 fi
 
+# Check if app exists, create if it doesn't
+if ! flyctl apps list | grep -q "event-finder-app"; then
+    echo "📱 Creating new app 'event-finder-app'..."
+    flyctl apps create event-finder-app
+fi
+
 # Deploy the application
 echo "📦 Deploying application..."
 flyctl deploy
